@@ -76,9 +76,9 @@ if (selected == 'Diabetes Prediction'):
         diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
         
         if (diab_prediction[0] == 1):
-          diab_diagnosis = 'The person is diabetic'
+          diab_diagnosis = 'The person has diabetes.'
         else:
-          diab_diagnosis = 'The person is not diabetic'
+          diab_diagnosis = 'The person does not have diabetes.'
         
     st.success(diab_diagnosis)
 
@@ -133,18 +133,18 @@ if (selected == 'Heart Disease Prediction'):
         thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
         
         
-     
-     
     # Code for Prediction
     heart_diagnosis = ''
     
     # Creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
-        heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
+        a = [age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]
+        b = [float(i) for i in a]
+        heart_prediction = heart_disease_model.predict([b])                          
         
         if (heart_prediction[0] == 1):
-          heart_diagnosis = 'The person is having heart disease'
+          heart_diagnosis = 'The person has heart disease'
         else:
           heart_diagnosis = 'The person does not have any heart disease'
         
@@ -228,13 +228,12 @@ if (selected == "Parkinsons Prediction"):
         PPE = st.text_input('PPE')
         
     
-    
     # Code for Prediction
     parkinsons_diagnosis = ''
     
     # Creating a button for Prediction    
     if st.button("Parkinson's Test Result"):
-        parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
+        parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer, Shimmer_dB, APQ3, APQ5, APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]])                          
         
         if (parkinsons_prediction[0] == 1):
           parkinsons_diagnosis = "The person has Parkinson's disease"

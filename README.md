@@ -4,4 +4,6 @@ This project which is Multiple Disease Prediction System is for practicing the d
 
 Link to the web application: https://alienx77-cmd-multiple-disease-prediction-system-web-app-dhd6ta.streamlit.app/
 
-The Multiple Disease Prediction System is consisted of diabetes, heart, and pakinson disease prediction system. The user must input each required data in all the fields as required to use the each predictive system.
+The Multiple Disease Prediction System is consisted of diabetes, heart, and pakinson disease prediction system. 
+
+The user must input all the required data in all the fields as required to use the each disease predictive system.

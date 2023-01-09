@@ -6,4 +6,4 @@ Link to the web application: https://alienx77-cmd-multiple-disease-prediction-sy
 
 The Multiple Disease Prediction System is consisted of diabetes, heart, and pakinson disease prediction system. 
 
-The user must input all the required data in all the fields as required to use the each disease predictive system.
+The user must input all the required data in all the fields as required to use each disease prediction system.
